@@ -4,9 +4,17 @@
              x:Class="CursoXamarin.ParOuImpar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+            <Label Text="Determina se um número é par ou ímpar"
+                   Scale="1.3"
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+            <Entry x:Name="etValor" Keyboard="Numeric" Placeholder="Informe um número" />
+            <Button x:Name="btnExecutar" Text="Executar" 
+                    Clicked="btnExecutar_Clicked"/>
+            <Label x:Name="lblResposta" Text=""
+                   Scale="1.3"
+                HorizontalOptions="CenterAndExpand" />
+                
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
