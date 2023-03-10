@@ -16,5 +16,19 @@ namespace CursoXamarin
         {
             InitializeComponent();
         }
+
+        private void btnExecutar_Clicked(object sender, EventArgs e)
+        {
+            int numero = Convert.ToInt32( etValor.Text);
+            string resposta = "O número " + etValor.Text + " é ";
+            if (numero % 2 == 0)
+            {
+                lblResposta.Text = resposta + "Par";
+            }
+            else
+            {
+                lblResposta.Text = resposta + "Impar";
+            }
+        }
     }
 }
