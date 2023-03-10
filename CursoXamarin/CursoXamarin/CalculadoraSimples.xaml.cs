@@ -20,24 +20,26 @@ namespace CursoXamarin
         private void btnExecutar_Clicked(object sender, EventArgs e)
         {
             Button bt = (Button)sender;
-            int result;
+            double valorA = Convert.ToDouble(etValorA.Text);
+            double valorB = Convert.ToDouble(etValorB.Text);
+            double result;
             if (bt.Text == "+")
             {
-                result = Convert.ToInt32(etValorA.Text) + Convert.ToInt32(etValorB.Text);
+                result = valorA + valorB;
             }
             else if (bt.Text == "-") 
             {
-                result = Convert.ToInt32(etValorA.Text) - Convert.ToInt32(etValorB.Text);
+                result = valorA - valorB;
             }
             else if(bt.Text == "*") 
             {
-                result = Convert.ToInt32(etValorA.Text) * Convert.ToInt32(etValorB.Text);
+                result = valorA * valorB;
             }
             else
             {
-                result = Convert.ToInt32(etValorA.Text) / Convert.ToInt32(etValorB.Text);
+                result = valorA / valorB;
             }
-            lbResposta.Text = Convert.ToString(result);
+            lbResposta.Text = result.ToString();
         }       
     }
 }

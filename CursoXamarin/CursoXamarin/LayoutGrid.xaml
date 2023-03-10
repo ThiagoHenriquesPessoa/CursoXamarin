@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CursoXamarin.LayoutGrid">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Text="Exemplo" Grid.Row="0" Grid.Column="0"/>
+        <Button Text="Exemplo" Grid.Row="0" Grid.Column="1"/>
+        <Button Text="Exemplo" Grid.Row="1" Grid.Column="0"/>
+        <Button Text="Exemplo" Grid.Row="1" Grid.Column="1"/>
+        <Button Text="Exemplo" Grid.Row="2" Grid.Column="0"/>
+        <Button Text="Exemplo" Grid.Row="2" Grid.Column="1"/>
+        <!--<Label Text="Top Left" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="Top Rigth" Grid.Row="0" Grid.Column="1"/>
+        <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0"/>
+        <Label Text="Bottom Rigth" Grid.Row="1" Grid.Column="1"/>-->
+    </Grid>
+</ContentPage>
