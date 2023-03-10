@@ -8,7 +8,7 @@ namespace CursoXamarin
         {
             InitializeComponent();
 
-            MainPage = new CalculadoraSimples();
+            MainPage = new LayoutGrid();
         }
 
         protected override void OnStart()
