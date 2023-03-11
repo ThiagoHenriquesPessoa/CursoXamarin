@@ -16,6 +16,12 @@ namespace CursoXamarin
         string mathOprator;
         double fistNumber, secondNumber;
 
+        public CalculadoraGrid()
+        {
+            InitializeComponent();
+            btnOnClear_Clicked(new object(), new EventArgs());
+        }
+
         private void btnOnClear_Clicked(object sender, EventArgs e)
         {
             fistNumber = 0;
@@ -29,7 +35,7 @@ namespace CursoXamarin
             Button button = (Button)sender;
             string pressed = button.Text;
 
-            if (lbResultText.Text == "0" || currentState == 0)
+            if (lbResultText.Text == "0" || currentState < 0)
             {
                 lbResultText.Text = "";
                 if (currentState < 0)
@@ -54,10 +60,40 @@ namespace CursoXamarin
             }
         }
 
-        public CalculadoraGrid()
+        void OnSelectOprator(object sender, EventArgs e)
         {
-            InitializeComponent();
-            btnOnClear_Clicked(new object(), new EventArgs());
+            currentState = -2;
+            Button button = (Button)sender;
+            string pressed = button.Text;
+            mathOprator = pressed;
+        }
+       
+        void OnCalculate(object sender, EventArgs e)
+        {
+            if (currentState == 2)
+            {
+                double result = 0;
+                if (mathOprator == "+") 
+                {
+                    result = fistNumber + secondNumber;
+                }
+                if (mathOprator == "-")
+                {
+                    result = fistNumber - secondNumber;
+                }
+                if (mathOprator == "/")
+                {
+                    result = fistNumber / secondNumber;
+                }
+                if (mathOprator == "x")
+                {
+                    result = fistNumber * secondNumber;
+                }
+
+                lbResultText.Text = result.ToString();
+                fistNumber = result;
+                currentState = -1;
+            }           
         }
     }
 }
