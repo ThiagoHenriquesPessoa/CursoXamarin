@@ -8,7 +8,7 @@ namespace CursoXamarin
         {
             InitializeComponent();
 
-            MainPage = new CalculadoraGrid();
+            MainPage = new HoraDoLanche();
         }
 
         protected override void OnStart()
