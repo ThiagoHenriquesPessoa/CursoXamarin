@@ -96,5 +96,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\after_lilo_stick.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cafe.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
