@@ -8,7 +8,7 @@ namespace CursoXamarin
         {
             InitializeComponent();
 
-            MainPage = new HoraDoLanche();
+            MainPage = new ComprarCafe();
         }
 
         protected override void OnStart()
