@@ -4,16 +4,16 @@
              x:Class="CursoXamarin.ComprarCafe">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Compra de Café!" FontSize="Large" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Compra de Café!" FontSize="30" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
             <Image Source="cafe"/>
-            <Label Text="Valor unitário" HorizontalOptions="CenterAndExpand"/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button Text="-" HorizontalOptions="StartAndExpand"/>
-                <Label Text="R$ 5,00"/>
-                <Button Text="+" HorizontalOptions="EndAndExpand"/>
+            <Label Text="Valor unitário" HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+            <Label Text="R$ 5,00" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+                <Button Text="+" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
             </StackLayout>
-            <Label x:Name="qtde" Text="Quantidade: 0" HorizontalOptions="CenterAndExpand"/>
-            <Label x:Name="Total" Text="Totatl: R$ 0,00" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="lQtde" Text="Quantidade: 0" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="lTotal" Text="Totatl: R$ 0,00" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
